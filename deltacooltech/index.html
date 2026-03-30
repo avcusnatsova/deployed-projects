@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delta Cool Tech - 24/7 AC Service in Thanjavur</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-deep: #030d1a;
+            --bg-medium: #0a1929;
+            --primary-blue: #1a6dd4;
+            --accent-blue: #3b8de8;
+            --light-blue: #6eb0f5;
+            --lighter-blue: #b8d9fb;
+            --white: #ffffff;
+            --gradient-blue: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
+            --gradient-text: linear-gradient(135deg, var(--accent-blue), var(--light-blue));
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 300;
+            background: var(--bg-deep);
+            color: var(--light-blue);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Noise texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(3, 13, 26, 0.8);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(59, 141, 232, 0.2);
+        }
+
+        nav.scrolled {
+            background: rgba(3, 13, 26, 0.95);
+            border-bottom: 1px solid rgba(59, 141, 232, 0.4);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 35px;
+            height: 35px;
+            background: var(--gradient-blue);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .logo .cool {
+            color: var(--accent-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--light-blue);
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--lighter-blue);
+        }
+
+        .cta-button {
+            background: var(--gradient-blue);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(26, 109, 212, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 109, 212, 0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 100px 0 50px;
+            position: relative;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(26, 109, 212, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(59, 141, 232, 0.08) 0%, transparent 50%),
+                var(--bg-deep);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-left {
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(26, 109, 212, 0.2);
+            border: 1px solid rgba(59, 141, 232, 0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.6s ease-out 0.2s both;
+        }
+
+        .hero-tag .dot {
+            color: #4ade80;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: var(--white);
+            animation: fadeInUp 0.6s ease-out 0.4s both;
+        }
+
+        .hero h1 .gradient {
+            background: var(--gradient-text);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtext {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 0.6s ease-out 0.6s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+            animation: fadeInUp 0.6s ease-out 0.8s both;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--gradient-blue);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(26, 109, 212, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 109, 212, 0.5);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--accent-blue);
+            color: var(--light-blue);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(59, 141, 232, 0.1);
+            border-color: var(--light-blue);
+        }
+
+        .hero-stats {
+            border-top: 1px solid rgba(59, 141, 232, 0.2);
+            padding-top: 20px;
+            display: flex;
+            gap: 30px;
+            animation: fadeInUp 0.6s ease-out 1s both;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .stat-icon {
+            color: var(--accent-blue);
+        }
+
+        /* Brands Panel */
+        .hero-right {
+            animation: slideInRight 0.8s ease-out;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .brands-card {
+            background: rgba(10, 25, 41, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(59, 141, 232, 0.3);
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .brands-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .brands-title {
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            color: var(--white);
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .brands-subtitle {
+            font-size: 0.85rem;
+            color: var(--light-blue);
+        }
+
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .brand-tile {
+            background: rgba(26, 109, 212, 0.1);
+            border: 1px solid rgba(59, 141, 232, 0.18);
+            border-radius: 14px;
+            padding: 1rem 0.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .brand-tile:hover {
+            background: rgba(59, 141, 232, 0.18);
+            border-color: rgba(59, 141, 232, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .brand-icon {
+            font-size: 1.5rem;
+            margin-bottom: 6px;
+        }
+
+        .brand-name {
+            font-size: 0.75rem;
+            color: var(--light-blue);
+            font-weight: 400;
+        }
+
+        .brands-footer {
+            border-top: 1px solid rgba(59, 141, 232, 0.2);
+            padding-top: 15px;
+            text-align: center;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: var(--light-blue);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(59, 141, 232, 0.35), transparent);
+            margin: 40px 0;
+        }
+
+        .section-label {
+            color: var(--accent-blue);
+            font-size: 0.9rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-title {
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: rgba(10, 25, 41, 0.6);
+            border: 1px solid rgba(59, 141, 232, 0.2);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: var(--gradient-blue);
+            transition: left 0.5s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 8px 25px rgba(26, 109, 212, 0.2);
+        }
+
+        .service-card:hover::before {
+            left: 0;
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-blue);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .service-name {
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .service-description {
+            color: var(--light-blue);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Why Choose Us */
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .reasons-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .reason-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .reason-number {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--accent-blue);
+            min-width: 40px;
+        }
+
+        .reason-content h3 {
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 5px;
+        }
+
+        .reason-content p {
+            color: var(--light-blue);
+            font-size: 0.95rem;
+        }
+
+        .commitment-card {
+            background: var(--gradient-blue);
+            border-radius: 16px;
+            padding: 40px;
+            color: var(--white);
+        }
+
+        .commitment-card h3 {
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .commitment-card p {
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .commitment-card .divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.2);
+            margin: 20px 0;
+        }
+
+        .commitment-card .phone {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--white);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: opacity 0.3s ease;
+        }
+
+        .commitment-card .phone:hover {
+            opacity: 0.8;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 50px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(26, 109, 212, 0.2);
+            border: 1px solid rgba(59, 141, 232, 0.3);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h3 {
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 5px;
+        }
+
+        .contact-details p {
+            color: var(--light-blue);
+            margin-bottom: 3px;
+        }
+
+        .contact-details a {
+            color: var(--light-blue);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-details a:hover {
+            color: var(--lighter-blue);
+        }
+
+        .hours-box {
+            background: rgba(26, 109, 212, 0.1);
+            border: 1px solid rgba(59, 141, 232, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .hours-box h3 {
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .hours-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .hours-badge {
+            background: rgba(74, 222, 128, 0.1);
+            border: 1px solid rgba(74, 222, 128, 0.3);
+            color: #4ade80;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+        }
+
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(59, 141, 232, 0.3);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            filter: hue-rotate(195deg) saturate(0.65) brightness(0.8);
+        }
+
+        .map-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-deep);
+            border-top: 1px solid rgba(59, 141, 232, 0.2);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 5px;
+        }
+
+        .footer-brand p {
+            color: var(--light-blue);
+            font-size: 0.9rem;
+        }
+
+        .copyright {
+            color: var(--light-blue);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .hero-grid, .why-grid, .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-right {
+                display: none;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .map-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">❄️</div>
+                Delta <span class="cool">Cool</span> Tech
+            </a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+                <a href="tel:+919865303947" class="cta-button">📞 Call Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-left">
+                    <div class="hero-tag">
+                        <span class="dot">●</span> Thanjavur's AC Specialists
+                    </div>
+                    <h1>
+                        Cool Comfort,<br>
+                        <span class="gradient">Delivered Fast.</span>
+                    </h1>
+                    <p class="hero-subtext">
+                        24/7 AC sales, installation, repair & maintenance services in Karanthai, Thanjavur. 
+                        Trusted experts for all AC brands with fast response times.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="tel:+919865303947" class="btn-primary">
+                            📞 Book a Service
+                        </a>
+                        <a href="#services" class="btn-secondary">
+                            Explore Services →
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-icon">⏰</span>
+                            <span>24/7 Available</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">🔧</span>
+                            <span>All AC Brands</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">⚡</span>
+                            <span>Fast Response</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="brands-card">
+                        <div class="brands-header">
+                            <div class="brands-title">Brands We Service</div>
+                            <div class="brands-subtitle">All major AC brands · Genuine parts</div>
+                        </div>
+                        <div class="brands-grid">
+                            <div class="brand-tile">
+                                <div class="brand-icon">🌀</div>
+                                <div class="brand-name">Samsung</div>
+                            </div>
+                            <div class="brand-tile">
+                                <div class="brand-icon">❄️</div>
+                                <div class="brand-name">LG</div>
+                            </div>
+                            <div class="brand-tile">
+                                <div class="brand-icon">💎</div>
+                                <div class="brand-name">Daikin</div>
+                            </div>
+                            <div class="brand-tile">
+                                <div class="brand-icon">⚡</div>
+                                <div class="brand-name">Voltas</div>
+                            </div>
+                            <div class="brand-tile">
+                                <div class="brand-icon">🔵</div>
+                                <div class="brand-name">Blue Star</div>
+                            </div>
+                            <div class="brand-tile">
+                                <div class="brand-icon">🌟</div>
+                                <div class="brand-name">Hitachi</div>
+                            </div>
+                            <div class="brand-tile">
+                                <div class="brand-icon">🔷</div>
+                                <div class="brand-name">Carrier</div>
+                            </div>
+                            <div class="brand-tile">
+                                <div class="brand-icon">💠</div>
+                                <div class="brand-name">Whirlpool</div>
+                            </div>
+                            <div class="brand-tile">
+                                <div class="brand-icon">🌬️</div>
+                                <div class="brand-name">Godrej</div>
+                            </div>
+                        </div>
+                        <div class="brands-footer">
+                            + All other brands serviced
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="fade-in">
+                <div class="section-label">Our Services</div>
+                <h2 class="section-title">Complete AC Solutions</h2>
+            </div>
+            <div class="section-divider"></div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">🛒</div>
+                    <div class="service-name">AC Sales</div>
+                    <div class="service-description">
+                        Wide range of air conditioners from top brands. Expert guidance to choose the perfect AC for your space and budget.
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔧</div>
+                    <div class="service-name">Installation</div>
+                    <div class="service-description">
+                        Professional AC installation by certified technicians. Proper setup for optimal performance and longevity.
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🛠️</div>
+                    <div class="service-name">Repair & Troubleshooting</div>
+                    <div class="service-description">
+                        Quick diagnosis and repair of all AC issues. Expert troubleshooting for cooling problems, strange noises, and more.
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🧹</div>
+                    <div class="service-name">Deep Cleaning</div>
+                    <div class="service-description">
+                        Thorough AC cleaning to remove dust, mold, and bacteria. Improves air quality and cooling efficiency.
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">💧</div>
+                    <div class="service-name">Gas Refilling</div>
+                    <div class="service-description">
+                        Professional AC gas refilling and leak detection. Restore optimal cooling performance with the right refrigerant.
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">📋</div>
+                    <div class="service-name">Annual Maintenance (AMC)</div>
+                    <div class="service-description">
+                        Comprehensive maintenance contracts for regular servicing. Prevent breakdowns and extend your AC's lifespan.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section>
+        <div class="container">
+            <div class="fade-in">
+                <div class="section-label">Why Choose Us</div>
+                <h2 class="section-title">Trusted AC Experts in Thanjavur</h2>
+            </div>
+            <div class="section-divider"></div>
+            <div class="why-grid">
+                <div class="reasons-list">
+                    <div class="reason-item fade-in">
+                        <div class="reason-number">01</div>
+                        <div class="reason-content">
+                            <h3>Available 24 Hours, 7 Days</h3>
+                            <p>Round-the-clock service including weekends and public holidays. Emergency AC repair when you need it most.</p>
+                        </div>
+                    </div>
+                    <div class="reason-item fade-in">
+                        <div class="reason-number">02</div>
+                        <div class="reason-content">
+                            <h3>All Brands Serviced</h3>
+                            <p>Expert service for Samsung, LG, Daikin, Voltas, Blue Star, Hitachi and all major AC brands.</p>
+                        </div>
+                    </div>
+                    <div class="reason-item fade-in">
+                        <div class="reason-number">03</div>
+                        <div class="reason-content">
+                            <h3>Transparent Pricing</h3>
+                            <p>Clear, upfront pricing with no hidden charges. Quality service at competitive rates.</p>
+                        </div>
+                    </div>
+                    <div class="reason-item fade-in">
+                        <div class="reason-number">04</div>
+                        <div class="reason-content">
+                            <h3>Karanthai-Based, Locally Trusted</h3>
+                            <p>Serving the Thanjavur community from our Karanthai location. Building relationships through reliable service.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="commitment-card fade-in">
+                    <h3>Your Comfort is Our Commitment</h3>
+                    <p>
+                        With years of experience in AC services, we understand the importance of a perfectly functioning air conditioner in Thanjavur's climate. Our team is dedicated to providing prompt, professional service that keeps your space cool and comfortable.
+                    </p>
+                    <div class="divider"></div>
+                    <a href="tel:+919865303947" class="phone">
+                        📞 +91 98653 03947
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="fade-in">
+                <div class="section-label">Get in Touch</div>
+                <h2 class="section-title">Visit Our Service Center</h2>
+            </div>
+            <div class="section-divider"></div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Address</h3>
+                            <p>No. 398, Main Road, Near Bus Stop,<br>
+                               Karanthai, Thanjavur – 613002</p>
+                        </div>
+                    </div>
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p><a href="tel:+919865303947">+91 98653 03947</a></p>
+                            <p><a href="tel:+917200326420">+91 72003 26420</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p><a href="mailto:vinith03126@gmail.com">vinith03126@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="hours-box fade-in">
+                        <h3>Working Hours</h3>
+                        <div class="hours-item">
+                            <span>Monday - Sunday</span>
+                            <span class="hours-badge">Open 24/7</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Public Holidays</span>
+                            <span class="hours-badge">Open</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Emergency</span>
+                            <span class="hours-badge">Always</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=karanthai+thanjavur&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="map-buttons">
+                        <a href="https://maps.app.goo.gl/oAZgndvTNw2dWuQZ8" class="btn-primary" target="_blank">
+                            📍 Get Directions
+                        </a>
+                        <a href="https://wa.me/919865303947" class="btn-secondary" target="_blank">
+                            💬 WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Delta Cool Tech</h3>
+                    <p>No. 398, Main Road, Karanthai, Thanjavur – 613002</p>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2026 Delta Cool Tech. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

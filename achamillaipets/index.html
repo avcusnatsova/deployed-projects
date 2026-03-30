@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achamillai Pets And Dog Sales In Thanjavur | Trusted Pet Shop Since 2018</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #F7F0E6;
+            --bg2: #EDE3D4;
+            --bg3: #E4D8C4;
+            --card: #FAF5EE;
+            --border: rgba(92,68,40,0.15);
+            --brown: #3D2410;
+            --brown2: #5C3D1E;
+            --gold: #8B6A2E;
+            --gold-lt: #A8833A;
+            --text: #3D2410;
+            --text-mid: #7A5A38;
+            --text-dim: #A08060;
+            --green: #2E7D32;
+            --white: #FAF5EE;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+        }
+
+        .section-label {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--gold);
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--brown);
+        }
+
+        .section-underline {
+            width: 48px;
+            height: 3px;
+            background: var(--gold);
+            margin-bottom: 40px;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+            padding: 15px 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            transition: box-shadow 0.3s;
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 2px 20px rgba(61,36,16,0.10);
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 6px;
+            background: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .nav-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            color: var(--gold);
+            font-size: 18px;
+        }
+
+        .nav-subtitle {
+            font-size: 11px;
+            color: var(--text-dim);
+            font-family: 'Nunito', sans-serif;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-mid);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .cta-button {
+            background: var(--gold);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background: var(--gold-lt);
+            transform: translateY(-2px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            border-radius: 6px;
+            background: var(--bg2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            background: var(--gold);
+            color: white;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--gold);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 em {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .hero-subtext {
+            font-size: 18px;
+            color: var(--text-mid);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-lt);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--gold);
+            padding: 12px 30px;
+            border: 2px solid var(--gold);
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: white;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 18px 28px;
+            border-right: 1px solid var(--border);
+            flex: 1;
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--brown);
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-mid);
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 30px;
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Services */
+        .services {
+            padding: 80px 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            text-align: center;
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            background: var(--bg2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Breeds */
+        .breeds {
+            padding: 80px 0;
+            background: var(--bg2);
+        }
+
+        .breeds-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .breed-card {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .breed-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .breed-tagline {
+            color: var(--text-mid);
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .available-badge {
+            display: inline-block;
+            background: var(--green);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .available-badge::before {
+            content: '●';
+            color: #2E7D32;
+            font-size: 10px;
+            margin-right: 6px;
+        }
+
+        /* About */
+        .about {
+            padding: 80px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature {
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 15px;
+            background: var(--bg2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-title {
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        /* Why Choose Us */
+        .why-choose {
+            padding: 80px 0;
+            background: var(--bg2);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .why-card {
+            text-align: center;
+        }
+
+        .why-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        /* Reviews */
+        .reviews {
+            padding: 80px 0;
+        }
+
+        .reviews-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .rating-badge {
+            background: var(--green);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            position: relative;
+        }
+
+        .review-rating {
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .review-author {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .review-date {
+            color: var(--text-dim);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .review-text {
+            color: var(--text-mid);
+        }
+
+        .review-quote {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 52px;
+            color: rgba(139,106,46,0.10);
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+
+        .justdial-badge {
+            background: var(--bg2);
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-align: center;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 80px 0;
+            background: var(--bg2);
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-q {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-q svg {
+            transition: transform 0.3s;
+        }
+
+        .faq-q.open svg {
+            transform: rotate(180deg);
+        }
+
+        .faq-q:hover {
+            border-color: var(--gold);
+        }
+
+        .faq-q.open {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .faq-a {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-top: none;
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .faq-a.open {
+            padding: 20px;
+            max-height: 200px;
+        }
+
+        /* Map */
+        .map-section {
+            padding: 80px 0;
+        }
+
+        .map-container {
+            margin-bottom: 30px;
+        }
+
+        .map-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 80px 0;
+            background: var(--bg2);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .contact-card {
+            text-align: center;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 15px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .contact-title {
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .contact-value {
+            color: var(--text-mid);
+        }
+
+        .social-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .social-btn {
+            background: var(--gold);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .social-btn:hover {
+            background: var(--gold-lt);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--brown);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+
+        .footer-info {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .footer-copyright {
+            font-size: 13px;
+            color: rgba(250,245,238,0.45);
+            margin-top: 20px;
+        }
+
+        /* Animations */
+        section {
+            opacity: 0;
+        }
+
+        section.visible {
+            animation: fadeUp 0.5s ease forwards;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 24px;
+                height: 18px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+            }
+
+            .mobile-menu-btn span {
+                display: block;
+                height: 2px;
+                background: var(--brown);
+                border-radius: 2px;
+                transition: all 0.3s;
+            }
+
+            .mobile-menu-btn.open span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .mobile-menu-btn.open span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .mobile-menu-btn.open span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+
+            .mobile-nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--card);
+                border-bottom: 1px solid var(--border);
+                padding: 20px;
+                box-shadow: 0 4px 20px rgba(61,36,16,0.10);
+            }
+
+            .mobile-nav.open {
+                display: block;
+            }
+
+            .mobile-nav a {
+                display: block;
+                padding: 12px 0;
+                color: var(--text-mid);
+                text-decoration: none;
+                font-weight: 600;
+                border-bottom: 1px solid var(--border);
+                transition: color 0.3s;
+            }
+
+            .mobile-nav a:hover {
+                color: var(--gold);
+            }
+
+            .mobile-nav a:last-child {
+                border-bottom: none;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .stat {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .stat:last-child {
+                border-bottom: none;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .mobile-menu-btn {
+                display: none;
+            }
+
+            .mobile-nav {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-left">
+                    <div class="nav-logo">AP</div>
+                    <div>
+                        <div class="nav-brand">Achamillai Pets</div>
+                        <div class="nav-subtitle">Thanjavur · Est. 2018</div>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#breeds">Breeds</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="nav-right">
+                    <a href="tel:8825961124" class="cta-button">Call Now</a>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/p/Achamillaipets-thanjavur-100079921733845/" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/achamillai_pets/" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-nav">
+                <a href="#home" onclick="closeMobileMenu()">Home</a>
+                <a href="#services" onclick="closeMobileMenu()">Services</a>
+                <a href="#breeds" onclick="closeMobileMenu()">Breeds</a>
+                <a href="#about" onclick="closeMobileMenu()">About</a>
+                <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+            </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="badge">Trusted Since 2018</div>
+            <h1>Thanjavur's Most Trusted <em>Pet Shop</em></h1>
+            <p class="hero-subtext">Your trusted partner for finding the perfect companion. We specialize in healthy, vaccinated puppies and kittens with complete documentation.</p>
+            <div class="hero-buttons">
+                <a href="#breeds" class="btn-primary">Browse Breeds</a>
+                <a href="tel:8825961124" class="btn-outline">Call Us Now</a>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value">4.9★</div>
+                    <div class="stat-label">Rating</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">147+</div>
+                    <div class="stat-label">Reviews</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">7+</div>
+                    <div class="stat-label">Years</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">13+</div>
+                    <div class="stat-label">Breeds</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-label">Our Services</div>
+            <h2 class="section-title">What We Offer</h2>
+            <div class="section-underline"></div>
+            <div class="services-grid">
+                <div class="card service-card">
+                    <div class="service-icon">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="var(--gold)">
+                            <path d="M4.5 10.5C4.5 12.985 6.515 15 9 15s4.5-2.015 4.5-4.5S11.485 6 9 6 4.5 8.015 4.5 10.5zM9 8c1.381 0 2.5 1.119 2.5 2.5S10.381 13 9 13s-2.5-1.119-2.5-2.5S7.619 8 9 8zM16.5 10.5C16.5 12.985 18.515 15 21 15s4.5-2.015 4.5-4.5S23.485 6 21 6s-4.5 2.015-4.5 4.5zM21 8c1.381 0 2.5 1.119 2.5 2.5S22.381 13 21 13s-2.5-1.119-2.5-2.5S19.619 8 21 8zM4.5 18.5C4.5 20.985 6.515 23 9 23s4.5-2.015 4.5-4.5S11.485 14 9 14s-4.5 2.015-4.5 4.5zM9 16c1.381 0 2.5 1.119 2.5 2.5S10.381 21 9 21s-2.5-1.119-2.5-2.5S7.619 16 9 16zM16.5 18.5C16.5 20.985 18.515 23 21 23s4.5-2.015 4.5-4.5S23.485 14 21 14s-4.5 2.015-4.5 4.5zM21 16c1.381 0 2.5 1.119 2.5 2.5S22.381 21 21 21s-2.5-1.119-2.5-2.5S19.619 16 21 16z"/>
+                        </svg>
+                    </div>
+                    <h3>Dog Sales</h3>
+                    <p>Healthy, vaccinated puppies of various breeds with complete health records and documentation. All dogs are properly socialized and ready for their forever homes.</p>
+                </div>
+                <div class="card service-card">
+                    <div class="service-icon">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="var(--gold)">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3>Cat & Kitten Sales</h3>
+                    <p>Adorable kittens and cats with proper vaccination records. We ensure all our felines are healthy, well-cared for, and ready to become part of your family.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breeds -->
+    <section class="breeds" id="breeds">
+        <div class="container">
+            <div class="section-label">Available Breeds</div>
+            <h2 class="section-title">Find Your Perfect Companion</h2>
+            <div class="section-underline"></div>
+            <div class="breeds-grid">
+                <div class="card breed-card">
+                    <div class="breed-name">Labrador</div>
+                    <div class="breed-tagline">Friendly & Loyal</div>
+                    <div class="available-badge">Available</div>
+                </div>
+                <div class="card breed-card">
+                    <div class="breed-name">Pomeranian</div>
+                    <div class="breed-tagline">Fluffy & Playful</div>
+                    <div class="available-badge">Available</div>
+                </div>
+                <div class="card breed-card">
+                    <div class="breed-name">German Shepherd</div>
+                    <div class="breed-tagline">Intelligent & Brave</div>
+                    <div class="available-badge">Available</div>
+                </div>
+                <div class="card breed-card">
+                    <div class="breed-name">Pug</div>
+                    <div class="breed-tagline">Charming & Gentle</div>
+                    <div class="available-badge">Available</div>
+                </div>
+                <div class="card breed-card">
+                    <div class="breed-name">Kittens</div>
+                    <div class="breed-tagline">Cute & Cuddly</div>
+                    <div class="available-badge">Available</div>
+                </div>
+                <div class="card breed-card">
+                    <div class="breed-name">Shih Tzu</div>
+                    <div class="breed-tagline">Affectionate & Calm</div>
+                    <div class="available-badge">Available</div>
+                </div>
+                <div class="card breed-card">
+                    <div class="breed-name">Beagle</div>
+                    <div class="breed-tagline">Curious & Energetic</div>
+                    <div class="available-badge">Available</div>
+                </div>
+                <div class="card breed-card">
+                    <div class="breed-name">Rottweiler</div>
+                    <div class="breed-tagline">Strong & Loyal</div>
+                    <div class="available-badge">Available</div>
+                </div>
+                <div class="card breed-card">
+                    <div class="breed-name">Lhasa Apso</div>
+                    <div class="breed-tagline">Regal & Watchful</div>
+                    <div class="available-badge">Available</div>
+                </div>
+                <div class="card breed-card">
+                    <div class="breed-name">Bully Puppy</div>
+                    <div class="breed-tagline">Confident & Strong</div>
+                    <div class="available-badge">Available</div>
+                </div>
+                <div class="card breed-card">
+                    <div class="breed-name">Terrier Puppy</div>
+                    <div class="breed-tagline">Energetic & Bold</div>
+                    <div class="available-badge">Available</div>
+                </div>
+                <div class="card breed-card">
+                    <div class="breed-name">Golden Retriever</div>
+                    <div class="breed-tagline">Gentle & Playful</div>
+                    <div class="available-badge">Available</div>
+                </div>
+                <div class="card breed-card">
+                    <div class="breed-name">Dachshund</div>
+                    <div class="breed-tagline">Brave & Curious</div>
+                    <div class="available-badge">Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-label">About Us</div>
+            <h2 class="section-title">Your Trusted Pet Partner Since 2018</h2>
+            <div class="section-underline"></div>
+            <p style="max-width: 800px; margin: 0 auto 50px; line-height: 1.8; color: var(--text-mid);">
+                Achamillai Pets And Dog Sales In Thanjavur has been serving the community since 2018, providing healthy, vaccinated pets to loving families. We specialize in dog sales and cat & kitten sales, ensuring each pet receives proper care, nutrition, and socialization before finding their forever home. Our commitment to quality and customer satisfaction has earned us a 4.9-star rating with over 147 positive reviews on JustDial.
+            </p>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--gold)">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        </svg>
+                    </div>
+                    <div class="feature-title">Health Guaranteed</div>
+                    <div class="feature-desc">All pets are healthy and vaccinated</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--gold)">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <div class="feature-title">All Breeds Available</div>
+                    <div class="feature-desc">Wide variety of breeds to choose from</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--gold)">
+                            <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+                        </svg>
+                    </div>
+                    <div class="feature-title">Vaccination Records</div>
+                    <div class="feature-desc">Complete documentation provided</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--gold)">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                        </svg>
+                    </div>
+                    <div class="feature-title">Expert Guidance</div>
+                    <div class="feature-desc">Professional advice on pet care</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--gold)">
+                            <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+                        </svg>
+                    </div>
+                    <div class="feature-title">Affordable Pricing</div>
+                    <div class="feature-desc">Competitive rates for all breeds</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--gold)">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <div class="feature-title">Post-Sale Support</div>
+                    <div class="feature-desc">Continued assistance after purchase</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-label">Why Choose Us</div>
+            <h2 class="section-title">The Achamillai Difference</h2>
+            <div class="section-underline"></div>
+            <div class="why-grid">
+                <div class="card why-card">
+                    <div class="why-icon">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Quality Assurance</h3>
+                    <p>Every pet undergoes thorough health checks and vaccinations before being made available for adoption.</p>
+                </div>
+                <div class="card why-card">
+                    <div class="why-icon">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3>Trusted by Thousands</h3>
+                    <p>Over 147 positive reviews and a 4.9-star rating speak to our commitment to customer satisfaction.</p>
+                </div>
+                <div class="card why-card">
+                    <div class="why-icon">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Expert Care</h3>
+                    <p>Our team provides professional care and attention to ensure every pet is healthy and well-socialized.</p>
+                </div>
+                <div class="card why-card">
+                    <div class="why-icon">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                    <h3>Loving Environment</h3>
+                    <p>All pets are raised in a caring environment with proper nutrition, exercise, and socialization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+        <div class="container">
+            <div class="reviews-header">
+                <div class="section-label">Customer Reviews</div>
+                <div class="rating-badge">4.9★ JustDial Rating</div>
+            </div>
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="section-underline"></div>
+            <div class="reviews-grid">
+                <div class="card review-card">
+                    <div class="review-quote">"</div>
+                    <div class="review-rating">★★★★★</div>
+                    <div class="review-author">Prabu Sakthi</div>
+                    <div class="review-date">13 Oct 2024</div>
+                    <div class="review-text">Good quality puppies, super delivery.</div>
+                </div>
+                <div class="card review-card">
+                    <div class="review-quote">"</div>
+                    <div class="review-rating">★★★★★</div>
+                    <div class="review-author">Verified Customer</div>
+                    <div class="review-date">21 Jan 2025</div>
+                    <div class="review-text">Excellent experience — very happy with my new pet.</div>
+                </div>
+                <div class="card review-card">
+                    <div class="review-quote">"</div>
+                    <div class="review-rating">★★★☆☆</div>
+                    <div class="review-author">Pet Lover</div>
+                    <div class="review-date">21 Apr 2024</div>
+                    <div class="review-text">Good selection of pets. Staff were helpful and knowledgeable.</div>
+                </div>
+            </div>
+            <div class="justdial-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--green)" style="vertical-align: middle; margin-right: 8px;">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                Rated on JustDial with 147+ Reviews
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-label">Frequently Asked Questions</div>
+            <h2 class="section-title">Got Questions? We Have Answers</h2>
+            <div class="section-underline"></div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                    Do you sell other types of pets besides cats and dogs?
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </div>
+                <div class="faq-a">
+                    No, we specialize exclusively in dog sales and cat & kitten sales. We focus on providing the best quality puppies and kittens with proper health records and vaccinations.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                    Is home delivery available?
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </div>
+                <div class="faq-a">
+                    Yes, we offer home delivery services within reasonable distance. Please contact us to discuss delivery options and associated costs for your location.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                    What are the shop timings?
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </div>
+                <div class="faq-a">
+                    We are open Monday through Saturday, 24 hours. We are closed on Sundays. However, we recommend calling ahead before visiting to ensure availability.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                    Is it safe to bring home a dog if I have a newborn or infant?
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </div>
+                <div class="faq-a">
+                    Yes, it can be safe with proper precautions. We recommend choosing breeds known for being gentle with children, ensuring the pet is fully vaccinated, and maintaining proper hygiene. We can guide you on the best practices for introducing a pet to a home with infants.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                    Do you offer breeding services?
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </div>
+                <div class="faq-a">
+                    No, we do not offer breeding services. We focus solely on selling healthy, well-cared-for puppies and kittens from reputable sources.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                    Can I board my pet here during a vacation?
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </div>
+                <div class="faq-a">
+                    No, we do not provide pet boarding or grooming services. Our focus is exclusively on pet sales. We can recommend local boarding facilities if needed.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-label">Visit Us</div>
+            <h2 class="section-title">Find Our Location</h2>
+            <div class="section-underline"></div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.062013061879!2d79.13556249999999!3d10.8065625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baac7002fbf1ecb%3A0x8007d4ef2ceabe3e!2sAchamillai%20pets%20and%20sale%20Thanjavur%2C%20South%20Rampart%2C%20Thanjavur%2C%20Tamil%20Nadu%20613002!5e0!3m2!1sen!2sin!4v1774074903051!5m2!1sen!2sin" width="100%" height="420" style="border:0;" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="map-info">
+                <div>
+                    <strong>No.18, Kasi Pandithar Kulam Street, Near Vijay Lakshmi Rice Mills, Karanthai, Thanjavur – 613002, Tamil Nadu</strong>
+                </div>
+                <a href="https://maps.app.goo.gl/oRJbYD7b1dFo1oAk7" class="btn-primary" target="_blank">Open in Google Maps</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-label">Get In Touch</div>
+            <h2 class="section-title">Contact Information</h2>
+            <div class="section-underline"></div>
+            <div class="contact-grid">
+                <div class="card contact-card">
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-title">Phone</div>
+                    <div class="contact-value">88259 61124</div>
+                    <div class="contact-value">72003 26420</div>
+                </div>
+                <div class="card contact-card">
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.532 5.862L.044 23.5l5.788-1.517A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.898 0-3.677-.513-5.207-1.401l-.374-.222-3.439.902.916-3.349-.243-.386A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-title">WhatsApp</div>
+                    <div class="contact-value">88259 61124</div>
+                    <div class="contact-value">72003 26420</div>
+                </div>
+                <div class="card contact-card">
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-title">Hours</div>
+                    <div class="contact-value">Monday - Saturday: 24 Hours</div>
+                    <div class="contact-value">Sunday: Closed</div>
+                </div>
+                <div class="card contact-card">
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-title">Address</div>
+                    <div class="contact-value">No.18, Kasi Pandithar Kulam Street</div>
+                    <div class="contact-value">Near Vijay Lakshmi Rice Mills</div>
+                    <div class="contact-value">Karanthai, Thanjavur – 613002</div>
+                </div>
+            </div>
+            <div class="social-buttons">
+                <a href="https://www.facebook.com/p/Achamillaipets-thanjavur-100079921733845/" class="social-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 8px;">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                    Follow on Facebook
+                </a>
+                <a href="https://www.instagram.com/achamillai_pets/" class="social-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 8px;">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                    </svg>
+                    Follow on Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">Achamillai Pets And Dog Sales In Thanjavur</div>
+            <div class="footer-info">
+                No.18, Kasi Pandithar Kulam Street, Near Vijay Lakshmi Rice Mills<br>
+                Karanthai, Thanjavur – 613002, Tamil Nadu<br>
+                Established in 2018 | Trusted Since 2018
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/p/Achamillaipets-thanjavur-100079921733845/" class="social-link" style="background: var(--brown2);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/achamillai_pets/" class="social-link" style="background: var(--brown2);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="footer-copyright">
+                © 2025 Achamillai Pets And Dog Sales. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functions
+        function toggleMobileMenu() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileNav = document.querySelector('.mobile-nav');
+            mobileMenuBtn.classList.toggle('open');
+            mobileNav.classList.toggle('open');
+        }
+
+        function closeMobileMenu() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileNav = document.querySelector('.mobile-nav');
+            mobileMenuBtn.classList.remove('open');
+            mobileNav.classList.remove('open');
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 10) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // FAQ toggle function
+        function toggleFaq(btn) {
+            const answer = btn.nextElementSibling;
+            const isOpen = answer.classList.contains("open");
+            document.querySelectorAll(".faq-a").forEach(a => a.classList.remove("open"));
+            document.querySelectorAll(".faq-q").forEach(b => b.classList.remove("open"));
+            if (!isOpen) { 
+                answer.classList.add("open"); 
+                btn.classList.add("open"); 
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for smooth section entrances
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
