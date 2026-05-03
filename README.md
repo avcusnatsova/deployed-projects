@@ -32,5 +32,3 @@ A business website for ac solutions.
 I am a Computer Science student focusing on building real-world projects and preparing for software/data roles.
 
 ---
-
-⭐ Feel free to explore the projects and give feedback!
