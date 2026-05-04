@@ -8,7 +8,7 @@ This repository contains my deployed web applications. Each project is live and 
 A website built for a pet-related platform.
 
 🔗 **Live Demo:** https://achamillaipetsthanjavur.netlify.app/  
-🛠 **Tech Stack:** HTML, CSS, JavaScript / Next.js  
+🛠 **Tech Stack:** HTML, CSS, JavaScript/Next.js  
 
 ---
 
